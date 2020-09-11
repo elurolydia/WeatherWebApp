@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Weather APP" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png" />
+    <meta name="description" content="A sample weather app" />
+    <meta name="theme-color" content="#2F3BA2" />
+    <script src="install.js"></script>
+    <!-- <meta name="mobile-web-app-capable" content="yes"> -->
+  </head>
+  <body>
+    <div id="sub-body">
+      <main>
+        <nav>
+          <!-- <button id='hisBtn'>History</button> -->
+          <button id="butInstall" aria-label="Install" hidden></button>
+          <button id="butRefresh" aria-label="Refresh">Refresh</button>
+          <div id="search-box">
+            <input
+              id="inputSearch"
+              type="text"
+              placeholder="Search for city here"
+            />
+            <button id="srhBtn">Go</button>
+          </div>
+        </nav>
+        <section id="main-section">
+          <div id="location">Your Location</div>
+          <div id="main-center">
+            <div>
+              <div id="date">dd, mm, yy</div>
+              <div id="time"></div>
+              <div id="temp">no°c</div>
+              <div id="description">Clear</div>
+            </div>
+            <div id="bigIconContainer">
+              <img id="bigIcon" src="./images/icons/icon-144x144.png" />
+            </div>
+          </div>
+        </section>
+        <section class="weekly">
+          <div class="weekly_container">
+            <div class="weekDays">
+              <img id="wk1Icon" src="./images/icons/icon-128x128.png" />
+              <p id="wk1">Tomorrow</p>
+              <p id="wk1Date"></p>
+            </div>
+
+            <div class="weekDays">
+              <img id="wk2Icon" src="./images/icons/icon-128x128.png" />
+              <p id="wk2">Next Day</p>
+              <p id="wk2Date"></p>
+            </div>
+
+            <div class="weekDays">
+              <img id="wk3Icon" src="./images/icons/icon-128x128.png" />
+              <p id="wk3">Next Day</p>
+              <p id="wk3Date"></p>
+            </div>
+
+            <div class="weekDays">
+              <img id="wk4Icon" src="./images/icons/icon-128x128.png" />
+              <p id="wk4">Next Day</p>
+              <p id="wk4Date"></p>
+            </div>
+
+            <div class="weekDays">
+              <img id="wk5Icon" src="./images/icons/icon-128x128.png" />
+              <p id="wk5">Next Day</p>
+              <p id="wk5Date"></p>
+            </div>
+
+            <div class="weekDays">
+              <img id="wk6Icon" src="./images/icons/icon-128x128.png" />
+              <p id="wk6">Next Day</p>
+              <p id="wk6Date"></p>
+            </div>
+
+            <div class="weekDays">
+              <img id="wk7Icon" src="./images/icons/icon-128x128.png" />
+              <p id="wk7">Next Day</p>
+              <p id="wk7Date"></p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- <script src="./main.js"></script> -->
+    <!-- <script src="./index.js"></script> -->
+    <script src="./assignment.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("service-worker.js").then((reg) => {
+            console.log("Service worker registered.", reg);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
