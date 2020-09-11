@@ -1,0 +1,328 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(good-weather-.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 80vh;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+#sub-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(70, 10, 10, 0.3),
+    rgba(94, 32, 32, 0.6)
+  );
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#hisBtn {
+  height: 40px;
+  margin-top: 10px;
+  width: 60px;
+  padding: 0px;
+  line-height: 40px;
+  position: relative;
+  bottom: 12px;
+  margin-left: 5px;
+}
+
+#butInstall {
+  width: 30px;
+  height: 40px;
+}
+
+#butRefresh {
+  height: 40px;
+  width: 55px;
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.342);
+  outline: none;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+#search-box {
+  margin-top: 10px;
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  padding: 5px;
+  border: solid 1px black;
+}
+
+input {
+  position: relative;
+  height: 40px;
+  margin-bottom: 0px;
+  width: 75%;
+  /* max-width: 280px; */
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background: white;
+  color: #313131;
+  font-size: 20px;
+  font-weight: 300;
+  transition: 0.2s ease-out;
+}
+input:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#srhBtn {
+  height: 40px;
+  width: 50px;
+  margin: 0px;
+  font-size: 20px;
+  color: blue;
+  background: white;
+  border: none;
+}
+
+#main-section {
+  margin-top: 0px;
+  text-align: center;
+  height: 400px;
+  padding: 5px 20px 30px 20px;
+}
+
+#main-center {
+  display: grid;
+  grid-auto-columns: 60% 40%;
+  grid-auto-flow: column;
+  align-content: center;
+}
+
+#location {
+  font-size: 2rem;
+  font-family: cursive;
+}
+
+#date,
+#time {
+  font-size: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#temp {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#description {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+#bigIcon {
+  position: relative;
+  top: 55px;
+  height: 150px;
+  width: 150px;
+}
+
+.weekDays {
+  display: grid;
+  grid-auto-columns: 32% 32% 36%;
+  grid-auto-flow: column;
+}
+
+.weekDays p {
+  line-height: 100px;
+  font-size: 14px;
+}
+
+.weekly {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 496px) {
+  #search-box {
+    margin-top: 10px;
+    float: right;
+    width: 350px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    border: solid 1px black;
+  }
+
+  input {
+    height: 40px;
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: white;
+    color: #313131;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+  }
+
+  #location {
+    font-size: 2.8rem;
+    font-family: cursive;
+  }
+
+  #date,
+  #time {
+    font-size: 32px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  #temp {
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  #description {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  #bigIcon {
+    position: relative;
+    top: 55px;
+    height: 200px;
+    width: 200px;
+  }
+
+  .weekly {
+    margin-top: -50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .weekly_container {
+    display: grid;
+    grid-auto-columns: auto auto auto auto auto auto auto;
+    grid-auto-flow: column;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .weekDays {
+    display: inline-block;
+    text-align: center;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .weekDays p {
+    position: relative;
+    top: 0%;
+    line-height: normal;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 830px) {
+  #location {
+    font-size: 2.8rem;
+    font-family: cursive;
+  }
+
+  #date,
+  #time {
+    font-size: 32px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  #temp {
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  #description {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  #bigIcon {
+    position: relative;
+    top: 55px;
+    height: 200px;
+    width: 200px;
+  }
+
+  .weekly {
+    /* height: 100px; */
+    margin-top: -50px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .weekly_container {
+    display: grid;
+    grid-auto-columns: auto auto auto auto auto auto auto;
+    grid-auto-flow: column;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .weekDays {
+    display: inline-block;
+    text-align: center;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+  .weekDays p {
+    position: relative;
+    top: 0%;
+    line-height: normal;
+    font-size: 16px;
+  }
+}
+
+@media all and (display-mode: standalone) {
+  body {
+    background-color: yellow;
+  }
+}
